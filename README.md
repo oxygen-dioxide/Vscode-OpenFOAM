@@ -14,6 +14,7 @@
 src="https://images.gitee.com/uploads/images/2020/0331/203011_4ee99ad6_6577728.png" alt="1" title="1.png" style="zoom:67%;" />
 
 - 打开`Make/options`，可以看到所有需要包含的头文件，以`-I`开头
+
 ![](https://images.gitee.com/uploads/images/2020/0331/203020_30aea035_6577728.png)
 
 值得注意的是，其中的`$(LIB_SRC)`所指的地址就是OpenFOAM源代码路径。如果你不知道这个路径，终端下执行
@@ -60,3 +61,4 @@ OpenFOAM的`.C .H`后缀可能使得Vscode识别语言类型错误，可以在`.
 <img
 src="https://images.gitee.com/uploads/images/2020/0331/203004_6b3a9480_6577728.png" alt="wsl" title="wsl.png"  />
 
+如果遇到问题请发起`issue`
