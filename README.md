@@ -1,5 +1,7 @@
 # Vscode-OpenFOAM
 
+![badge](https://img.shields.io/badge/Modern-Editor-green)
+
 ### 介绍
 使用vscode进行OpenFOAM编程的配置
 
