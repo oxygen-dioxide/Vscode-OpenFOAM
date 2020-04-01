@@ -70,10 +70,12 @@ src="https://images.gitee.com/uploads/images/2020/0331/203051_8a133d47_6577728.p
 <img
 src="https://images.gitee.com/uploads/images/2020/0331/203004_6b3a9480_6577728.png" alt="wsl" title="wsl.png"  />
 
-- 如果遇到问题请发起`issue`
+- 如果遇到问题请[点我][1]发起`issue`
 
 ----
 
 ### LICENSE
 
 本内容基于CC-BY-4.0 协议，转载请注明出处
+
+[1]:https://gitee.com/fr13ndsdp/Vscode-OpenFOAM/issues/new
