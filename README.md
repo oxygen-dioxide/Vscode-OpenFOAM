@@ -3,7 +3,7 @@
 ![badge](https://img.shields.io/badge/Modern-Editor-green)
 
 ### 介绍
-使用vscode进行OpenFOAM编程的配置
+使用现代化的编辑器vscode进行OpenFOAM编程的配置，大大提升编程体验。
 
 ### 说明
 - 首先搜索扩展`c/c++`安装如下的C++扩展：
