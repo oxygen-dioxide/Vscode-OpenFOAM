@@ -19,7 +19,9 @@ src="https://images.gitee.com/uploads/images/2020/0331/203011_4ee99ad6_6577728.p
 
 ![](https://images.gitee.com/uploads/images/2020/0331/203020_30aea035_6577728.png)
 
-值得注意的是，其中的`$(LIB_SRC)`所指的地址就是OpenFOAM源代码路径。如果你不知道这个路径，终端下执行
+值得注意的是，其中的`$(LIB_SRC)`所指的地址就是OpenFOAM源代码路径。
+
+如果你不知道这个路径，终端下执行
 
 ```
 src
@@ -39,7 +41,10 @@ src="https://images.gitee.com/uploads/images/2020/0331/203027_f031cbf3_6577728.p
 <img
 src="https://images.gitee.com/uploads/images/2020/0331/203037_0efc8c8c_6577728.png" alt="4" title="4.png" style="zoom:67%;" />
 
-第一个参数`g++`说明`wmake`使用g++编译器，因此将g++的路径替换`compilerPath`中的内容，不知道g++路径？终端里`which g++`得到。后面`-std = c++11 -m64 ... -ftemplate-depth-100`是`compilerArgs`，大部分是规定了编译过程错误信息输出以及优化信息，还有一些尚不明确，你可以将他们都加到`compilerArgs`里
+第一个参数`g++`说明`wmake`使用g++编译器，因此将g++的路径替换`compilerPath`中的内容，不知道g++路径？终端里`which g++`得到。后面`-std = c++11 -m64 ... -ftemplate-depth-100`是`compilerArgs`，
+大部分是规定了编译过程错误信息输出以及优化信息，其中，`-W`开头的参数规定了编译过程中错误信息如何输出，对于我们使用编辑器没有作用，`-std = c++ 11 -m64 -O3`这几个参数则规定了编译使用的C++标准和优化信息，可以保留，而
+以`-D`参数开头的是一些宏定义，他们有的规定了所使用的精度等级，这些定义十分重要，如果不加会引起类型错误。最后`-ftemplate-depth-100`规定了实例化搜寻深度，默认值为900，所以如果不加应该也没有问题，但是对性能的影响尚不清楚。
+如果你觉得太麻烦，你可以将他们全都加到`compilerArgs`里
 
 <img
 src="https://images.gitee.com/uploads/images/2020/0331/203042_115e5a24_6577728.png" alt="5" title="5.png" style="zoom:67%;" />
@@ -54,9 +59,9 @@ src="https://images.gitee.com/uploads/images/2020/0331/203051_8a133d47_6577728.p
 -----
 
 ### NOTE
-由于OpenFOAM”特殊“的编程风格，常在头文件中写代码段而不是类声明等常规写法，会导致报错，比如`Info`的`ambigous`错误提示，目前没有解决方法
+由于OpenFOAM”特殊“的编程风格，常在头文件中写代码段而不是类声明等常规写法，会导致报错，比如头文件中`runTime`的`undefined`错误提示，目前没有解决方法。如果你不想看到这些错误提示，可以设置忽略，具体方法在网上很容易找到。
 
-OpenFOAM的`.C .H`后缀可能使得Vscode识别语言类型错误，可以在`.vscode`下创建`setting.json`设置类型绑定，具体方法在网上很容易找到
+OpenFOAM的`.C .H`后缀可能使得Vscode识别语言类型错误，可以在`.vscode`下创建`settings.json`设置类型绑定，具体方法在网上很容易找到
 
 如果是wsl用户，可以使用wsl插件在vscode中调用bash，上述操作均在vscode连接Ubuntu后进行
 
