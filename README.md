@@ -59,16 +59,18 @@ src="https://images.gitee.com/uploads/images/2020/0331/203051_8a133d47_6577728.p
 -----
 
 ### NOTE
-由于OpenFOAM”特殊“的编程风格，常在头文件中写代码段而不是类声明等常规写法，会导致报错，比如头文件中`runTime`的`undefined`错误提示，目前没有解决方法。如果你不想看到这些错误提示，可以设置忽略，具体方法在网上很容易找到。
+- 由于OpenFOAM”特殊“的编程风格，常在头文件中写代码段而不是类声明等常规写法，会导致报错，比如头文件中`runTime`的`undefined`错误提示和`Info`的`ambigous`提示，目前没有解决方法。如果你不想看到这些错误提示，可以设置忽略，具体方法在网上很容易找到
 
-OpenFOAM的`.C .H`后缀可能使得Vscode识别语言类型错误，可以在`.vscode`下创建`settings.json`设置类型绑定，具体方法在网上很容易找到
+- OpenFOAM的`.C .H`后缀可能使得Vscode识别语言类型错误，可以在`.vscode`下创建`settings.json`设置类型绑定，具体方法在网上很容易找到
 
-如果是wsl用户，可以使用wsl插件在vscode中调用bash，上述操作均在vscode连接Ubuntu后进行
+- 由于C++扩展进行intellisense会占用较大的存储空间，每打开一个工程，就会相应生成一个100Mb左右的缓存文件。可以定期清理`~/.cache/vscode-cpptools/ipch`下的缓存文件来释放空间
+
+- 如果是wsl用户，可以使用wsl插件在vscode中调用bash，*上述操作均在vscode连接Ubuntu后进行*
 
 <img
 src="https://images.gitee.com/uploads/images/2020/0331/203004_6b3a9480_6577728.png" alt="wsl" title="wsl.png"  />
 
-如果遇到问题请发起`issue`
+- 如果遇到问题请发起`issue`
 
 ----
 
