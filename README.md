@@ -63,7 +63,7 @@ src="https://images.gitee.com/uploads/images/2020/0331/203051_8a133d47_6577728.p
 
 - OpenFOAM的`.C .H`后缀可能使得Vscode识别语言类型错误，可以在`.vscode`下创建`settings.json`设置类型绑定，具体方法在网上很容易找到
 
-- 由于C++扩展进行intellisense会占用较大的存储空间，每打开一个工程，就会相应生成一个100Mb左右的缓存文件。可以定期清理`~/.cache/vscode-cpptools/ipch`下的缓存文件来释放空间
+- 由于C++扩展进行intellisense会占用较大的存储空间，每打开一个工程，就会相应生成一个100Mb左右的预编译文件，但是对于intellisense没有作用。可以定期清理`~/.cache/vscode-cpptools/ipch`下的缓存文件来释放空间，或者在设置中把`intellisense cache size`设为0禁用。
 
 - 如果是wsl用户，可以使用wsl插件在vscode中调用bash，*上述操作均在vscode连接Ubuntu后进行*
 
