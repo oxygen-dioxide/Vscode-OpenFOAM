@@ -29,6 +29,13 @@ pwd
 ```
 打印出的内容就是`$LIB_SRC`
 
+**值得注意的是，`Make/options`中的头文件并不完整，还需要加入以下两个头文件：**
+```
+/opt/OpenFOAM/OpenFOAM-v1912/USERNAME/src/OpenFOAM/lnInclude
+/opt/OpenFOAM/OpenFOAM-v1912/USERNAME/src/OSspecific/POSIX/lnInclude
+```
+请自行搜索以上两个头文件在你的设备中的位置。
+
 - 接着把完整路径放到C++配置文件的`includePath`中：
 
 <img
